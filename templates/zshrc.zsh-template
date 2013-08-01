@@ -8,10 +8,12 @@ fi
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="philips"
+alias vim="nocorrect vim"
+export EDITOR="vim"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="$EDITOR ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
@@ -43,6 +45,9 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source $HOME/.rvm/scripts/rvm
+#export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#source $HOME/.rvm/scripts/rvm
 
+export PATH=$PATH:~/bin:~/.cabal/bin:~/.xmonad/bin
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd_hrgb'
+export JAVA_FONTS=/usr/share/fonts/TTF
