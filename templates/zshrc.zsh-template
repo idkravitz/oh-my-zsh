@@ -48,7 +48,7 @@ alias zshconfig="$EDITOR ~/.zshrc"
 
 plugins=(git gem github heroku nyan rvm ruby rake rails3 extract perl python)
 
-if  $(cat /etc/issue | grep 'Arch' &> /dev/null); then
+if test -e /etc/issue && $(cat /etc/issue | grep 'Arch' &> /dev/null); then
     plugins+=(archlinux)
     alias reflect='sudo reflector -l 10 -f 3 --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 fi
